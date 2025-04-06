@@ -15,6 +15,20 @@ export default class App extends Component {
     };
   }
 
+  handleAdd = (todo) => {
+    this.setState({
+      todos: [...this.state.todos, { text: todo }],
+    });
+  };
+
+  handleRemove = (text) => {
+    this.setState({
+      todos: this.state.todos.filter((todo) => {
+        return todo.text !== text;
+      }),
+    });
+  };
+
   render() {
     return (
       <div className="App">
