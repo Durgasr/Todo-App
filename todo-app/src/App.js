@@ -19,6 +19,8 @@ export default class App extends Component {
     return (
       <div className="App">
         <span>Todo</span>
+        <Form handleAdd={this.handleAdd} />
+        <List todos={this.state.todos} handleRemove={this.handleRemove} />
       </div>
     );
   }
