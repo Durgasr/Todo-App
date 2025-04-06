@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import { Component } from "react";
+import { List } from "./List";
+import { Form } from "./Form";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todos: [
+        { text: "Do the laundry" },
+        { text: "Iron the clothes" },
+        { text: "Go for a walk" },
+      ],
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <span>Todo</span>
+      </div>
+    );
+  }
 }
-
-export default App;
