@@ -16,9 +16,13 @@ export default class App extends Component {
   }
 
   handleAdd = (todo) => {
-    this.setState({
-      todos: [...this.state.todos, { text: todo }],
-    });
+    if (todo === "") {
+      alert("Please enter your task");
+    } else {
+      this.setState({
+        todos: [...this.state.todos, { text: todo }],
+      });
+    }
   };
 
   handleRemove = (text) => {
